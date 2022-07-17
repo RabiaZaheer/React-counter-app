@@ -8,6 +8,9 @@ class Counter extends Component {
     
     
  };
+ handleIncrement(){
+    console.log("increment Clicked");
+ }
  style={
     fontSize:'10px',
     fontWeight: "bold"
@@ -19,7 +22,7 @@ class Counter extends Component {
         <React.Fragment> 
             
             <span style={this.style } className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
+            <button className="btn btn-secondary btn-sm" onClick={this.handleIncrement()}>Increment</button>
             <ul>
               {this.state.tags.map(tag=><li key={tag}>{tag}</li>)}
             </ul>
